@@ -59,7 +59,6 @@ Here's an example directory structure:
 ```
 scss/
 ├─ base/
-│   ├─ _normalize.scss
 │   ├─ _root.scss
 ├─ components/
 │   ├─ _menu.scss
