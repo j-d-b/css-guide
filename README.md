@@ -54,7 +54,7 @@ Here's an example navbar, showing BEM class names (*modified from [csswizardry](
 /* A 'modifier' of an 'element' */
 .navbar__item--new {}
 
-/* Another 'block'
+/* Another 'block' */
 .button {}
 
 /* And modifier */
@@ -122,7 +122,7 @@ Examples: `l-wrap`, `l-row`, `l-zindex-2`
 Examples: `is-hidden`, `has-dropdown`
 
 ### Objects
-* Prefix **objects** with `-o`
+* Prefix **objects** with `o-`
 * Objects are the smallest, abstract building blocks of a website
 * Objects may be used in any number of unrelated contexts
 * Objects should not change any structure outside itself (e.g. `margin`, `position`, `display`)
@@ -131,7 +131,7 @@ Examples: `is-hidden`, `has-dropdown`
 Examples: `o-button`, `o-media`
 
 ### Components
-* Prefix **components** with `-c`
+* Prefix **components** with `c-`
 * Components are distinct pieces of UI
 * Components start a context
 * Components can contain other components and objects
