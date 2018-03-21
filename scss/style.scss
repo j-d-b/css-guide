@@ -1,11 +1,14 @@
 @import 'base/normalize';
 @import 'base/root';
-@import 'base/layout';
-@import 'base/utilites';
-@import 'base/typography';
 
-@import 'components/modal';
-@import 'components/navbar';
+@import 'layout/grid';
+@import 'layout/container';
 
-@import 'objects/button';
-@import 'objects/media';
+@import 'utilities/spacing';
+@import 'utilities/typography';
+
+@import 'abstract/button';
+@import 'abstract/media';
+
+@import 'distinct/profile';
+@import 'distinct/sidebar';
