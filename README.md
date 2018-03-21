@@ -198,7 +198,8 @@ You don't have to use a specific `_root.scss` file, but all styled HTML elements
 Check out the source for import order example.
 
 ## Additional notes
-* I'm considering combining `layout` and `utility` namespaces, depending on the project
+* I'm considering combining `layout` and `utility` namespaces, depending on the project, changing the prefix to `a-`, and calling the directory `atomic`
+* Also considering not requiring `c-` prefix for components
 * `margin` classes could technically be `l-` prefixed, but padding `u-` prefixed. This is annoying, so I prefix both with `u-`
 
 ## References
