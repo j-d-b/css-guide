@@ -1,8 +1,6 @@
 # CSS Methodology and Architecture
 *A summarized guide for organizing CSS, from class names to file structure*
 
----
-
 ## Introduction
 This is a style guide promoting consistent, maintainable styling in web development.
 
@@ -16,29 +14,29 @@ Preliminary notes:
 * Aim for maximum abstraction and reusability
 
 ## Class names
-I recommend using standard BEM class names (*see: http://getbem.com/naming/*)
+We'll be using standard BEM class names (*see: http://getbem.com/naming/*)
 
 BEM naming separates styling classes into three parts, **blocks**, **elements**, and **modifiers**. This creates a connection between classes which greatly enhances clarity. No longer must one wonder if two classes are related, or if one depends on another; it's all in the name.
 
 `.block__element--modifier`
 
-#### Blocks
-* Blocks are a top-level class with meaning on their own
+### Blocks
+* Blocks are a top-level class which hold meaning on their own
 * Blocks begin a context in which child **elements** can reside
 
 Examples: `menu`, `modal`
 
-#### Elements
+### Elements
 * Elements are part of a block that have no meaning outside of the block
 
 Examples: `menu__item`, `modal__header`
 
-#### Modifiers
+### Modifiers
 * An additional class signifying a modification to a block or element, such as a different color or size
 
 Examples: `menu--large`, `modal__header--blue`
 
-#### BEM naming: A full example
+### BEM naming: A full example
 Here's an example navbar, showing BEM class names (*modified from [csswizardry](https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/)*):
 ```
 /* The top-level 'block' of a component, in this example, a navbar */
@@ -78,7 +76,7 @@ Putting it together:
 ## Adding namespaces
 In addition to BEM class naming, we'll be adding namespace prefixes to further clarify the role of a specific class.
 
-Using namespaces benefits readability in HTML and facilitates organization into files.
+Using namespaces enhances readability in HTML and facilitates organization into files.
 
 We'll use seven distinct namespaces, and they're all pretty straightforward:
 * `js-` for javascript hooks
@@ -89,11 +87,11 @@ We'll use seven distinct namespaces, and they're all pretty straightforward:
 * `o-` for abstract objects
 * `c-` for distinct components
 
-#### Javascript hooks
+### Javascript hooks
 * Prefix classes that are used as javascript hooks with  with `js-`
 * Do not style these; they should not appear in CSS files
 
-#### Utilities
+### Utilities
 * Prefix utility classes with `u-`
 * Utilities have a specific single role, such as centering text
 * They are not tied to any individual piece of UI and are often atomic
@@ -101,7 +99,7 @@ We'll use seven distinct namespaces, and they're all pretty straightforward:
 
 Examples: `u-clearfix`, `u-display-none`, `u-text-center`
 
-#### Typography
+### Typography
 * Prefix **typography** related classes with `t-`
 * These include font sizes, families, weights, and styles
 * Do not change padding or margins in typography classes
@@ -109,7 +107,7 @@ Examples: `u-clearfix`, `u-display-none`, `u-text-center`
 
 Examples: `t-lg`, `t-roboto`, `t-italic`
 
-#### Layout
+### Layout
 * Prefix layout classes with `l-`
 * Layout classes do not logically have descendent elements or modifiers
 * Layout classes are global only, such as grids and wraps
@@ -117,13 +115,13 @@ Examples: `t-lg`, `t-roboto`, `t-italic`
 
 Examples: `l-wrap`, `l-row`, `l-zindex-2`
 
-#### State
+### State
 * Prefix state classes with `is-` or `has-`
 * State classes do not logically have descendent elements or modifiers
 
 Examples: `is-hidden`, `has-dropdown`
 
-#### Objects
+### Objects
 * Prefix **objects** with `-o`
 * Objects are the smallest, abstract building blocks of a website
 * Objects may be used in any number of unrelated contexts
@@ -132,7 +130,7 @@ Examples: `is-hidden`, `has-dropdown`
 
 Examples: `o-button`, `o-media`
 
-#### Components
+### Components
 * Prefix **components** with `-c`
 * Components are distinct pieces of UI
 * Components start a context
@@ -199,6 +197,10 @@ You don't have to use a specific `_root.scss` file, but all styled HTML elements
 
 Check out the source for import order example.
 
+## Additional notes
+* I'm considering combining `layout` and `utility` namespaces, depending on the project
+* `margin` classes could technically be `l-` prefixed, but padding `u-` prefixed. This is annoying, so I prefix both with `u-`
+
 ## Sources
 http://nicolasgallagher.com/about-html-semantics-front-end-architecture/
 
@@ -211,7 +213,3 @@ http://www.jamesturneronline.net/blog/bemit-naming-convention.html
 http://getbem.com/
 
 https://smacss.com/
-
-## Additional notes
-* I'm considering combining `layout` and `utility` namespaces, depending on the project
-* `margin` classes could technically be `l-` prefixed, but padding `u-` prefixed. This is annoying, so I prefix both with `u-`
