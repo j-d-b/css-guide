@@ -1,5 +1,4 @@
-# CSS Methodology and Architecture
-*A summarized guide for organizing CSS, from class names to file structure*
+# Using My CSS Methodology and Architecture with [Bootstrap](https://github.com/twbs/bootstrap)
 
 ## Introduction
 Here I propose modifications to the style guide if aiming for maximum leverage of [Bootstrap](https://github.com/twbs/bootstrap) classes for styling and layout.
