@@ -25,40 +25,8 @@ All classes will have a namespace prefix. Thus, classes without a prefix are ass
 * `js-` for javascript hooks
 * `c-` for all components
 
-### Layout
-* Prefix layout classes with `l-`
-* Since Bootstrap provides a pretty powerful responsive grid, you might not need to write any layout classes
-
-Examples: `l-grid`, `l-row`
-
-### Utilities
-* Prefix utility classes with `u-`
-* Utilities have a specific role, such as centering text or adding padding
-* They are not tied to any individual piece of UI and are often atomic
-* Utility classes do not logically have descendent elements or modifiers
-
-Examples: `u-zindex-2`, `u-display-none`, `u-text-center`, `u-padding-2`
-
-### Typography
-* Prefix **typography** related classes with `t-`
-* These include font sizes, families, weights, and styles
-* Do not change padding or margins in typography classes
-* Typography classes are similar to utilities in that they have are often atomic and have a single, specific effect, while not tied to a context
-
-Examples: `t-lg`, `t-roboto`, `t-italic`
-
-### State
-* Prefix state classes with `is-` or `has-`
-* State classes do not logically have descendent elements or modifiers
-
-Examples: `is-hidden`, `has-dropdown`
-
-### Javascript hooks
-* Prefix classes that are used as javascript hooks with  with `js-`
-* Do not style these; they should not appear in CSS files
-
 ### Components
-* Prefix components with `c-`
+* Prefix all components with `c-`
 * Components can contain other components and objects
 * Components start a context for sub-elements
 
@@ -102,15 +70,6 @@ scss/
 │   ├─ _spacing.scss
 │   └─ _typography.scss
 └─ style.scss
-```
-
-Here `_root.scss` is the only location in which HTML elements themselves are styled. You don't have to use a specific `_root.scss` file, but all styled HTML elements should be in `base/` only.
-
-This is useful for a few resets, or common actions like removing margins from headings or something like
-```
-html {
-  font-size: 62.5%
-}
 ```
 
 `style.scss` is composed entirely of imports in the following order:
