@@ -4,7 +4,7 @@
 ## Introduction
 This is a style guide promoting consistent, maintainable styling in web development.
 
-I incorporated and summarized ideas that most inspired me from [BEM](http://getbem.com/naming/), [Harry Roberts](https://csswizardry.com/), and [other sources](#sources).
+I incorporated and summarized ideas that most inspired me from [BEM](http://getbem.com/naming/), [Harry Roberts](https://csswizardry.com/), and [other sources](#references).
 
 There is nothing to download; the `sass/` directory contains empty directories and files from the [file structure example](#file-structure) below.
 
@@ -201,7 +201,7 @@ Check out the source for import order example.
 * I'm considering combining `layout` and `utility` namespaces, depending on the project
 * `margin` classes could technically be `l-` prefixed, but padding `u-` prefixed. This is annoying, so I prefix both with `u-`
 
-## Sources
+## References
 http://nicolasgallagher.com/about-html-semantics-front-end-architecture/
 
 https://www.lullabot.com/articles/bem-atomic-design-a-css-architecture-worth-loving
