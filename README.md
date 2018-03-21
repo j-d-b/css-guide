@@ -6,7 +6,7 @@ This is a style guide promoting consistent, maintainable styling in web developm
 
 I incorporated and summarized ideas that most inspired me from [BEM](http://getbem.com/naming/), [Harry Roberts](https://csswizardry.com/), and [other sources](#references).
 
-There is nothing to download; the `sass/` directory contains some examples files with empty classes [file structure example](#file-structure) below.
+There is nothing to download; the `scss/` directory contains some examples files with empty classes [file structure example](#file-structure) below.
 
 Preliminary notes:
 * Only style with classes, *not ids*
