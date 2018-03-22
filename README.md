@@ -76,7 +76,7 @@ We'll use six distinct namespaces, and they're all pretty straightforward:
 * `t-` for typography related styling
 * `is-` and `has-` to reflect temporary states
 * `js-` for javascript hooks
-* `ac-` for abstract components
+* `a-` for abstract objects
 * no prefix for distinct components
 
 ### Layout
@@ -112,28 +112,26 @@ Examples: `is-hidden`, `has-dropdown`
 * Prefix classes that are used as javascript hooks with  with `js-`
 * Do not style these; they should not appear in CSS files
 
+### Abstracts
+* Prefix abstracts with `a-`
+* Abstracts are general and highly reusable
+* Abstracts may be used in any number of unrelated contexts
+* Abstracts should not change any structure outside itself (e.g. `margin`, `position`, `display`)
+* Abstracts should not contain components, only other abstracts and sub-elements
+* Abstracts are a subset of components that aren't tied to a specific piece of UI 
+
+Examples: `a-button`, `a-media`, `a-list`, `a-card`, `a-menu`
+
 ### Components
-* Components are made up of two subtypes:
-  1. General, abstract, and highly reusable
-  2. Distinct, specifically-purposed pieces of UI
+* Components are distinct, specifically-purposed part of the UI
+* Components need no prefix
+* Components start a context
+* Components can contain other components and objects
+* Components are basically any of your custom elements!
 
-###### 1. Abstract components
-* Prefix abstract components with `ac-`
-* Abstract components may be used in any number of unrelated contexts
-* Abstract components should not change any structure outside itself (e.g. `margin`, `position`, `display`)
-* Abstract components cannot contain other objects or components, only sub-elements
-
-Examples: `ac-button`, `ac-media`, `ac-list`
-
-###### 2. Distinct components
-* Distinct components need no prefix
-* Distinct components start a context
-* Distinct components can contain other components and objects
-
-Examples: Basically any of your custom elements!
+Examples: `chatbox`, `sidebar`, `staff-list`
 
 Now let's reflect these additions in our navbar example, and add a couple more elements:
-
 ```
 <div class="l-row u-width-50">
   <div class="navbar navbar--blue t-bold js-main-nav">
@@ -141,7 +139,7 @@ Now let's reflect these additions in our navbar example, and add a couple more e
     <div class="navbar-item"></div>
     <div class="navbar-item navbar-item--new"></div>
     <div class="navbar-item">
-      <div class="ac-button ac-button--navbar"></div>
+      <div class="a-button a-button--navbar"></div>
     </div>
   </div>
 </div>
@@ -156,20 +154,20 @@ We'll separate our scss partials (or css files) into five directories, which imp
 
 `utilities/` contains a partial for types of non-layout utilities, including typography
 
-`abstract/` contains a partial for each abstract component, with relevant state classes, sub-elements, and modifiers
+`abstracts/` contains a partial for each abstract, with relevant state classes, sub-elements, and modifiers
 
-`distinct/` contains a partial for all other components, with relevant state classes, sub-elements, and modifiers
+`components/` contains a partial for all components, with relevant state classes, sub-elements, and modifiers
 
 Here's an example directory structure:
 ```
 scss/
-├─ abstract/
+├─ abstracts/
 │   ├─ _button.scss
 │   └─ _media.scss
 ├─ base/
 │   ├─ _normalize.scss
 │   ├─ _root.scss
-├─ distinct/
+├─ components/
 │   ├─ _sidebar.scss
 │   └─ _footer.scss
 ├─ layout/
@@ -192,7 +190,7 @@ html {
 
 `style.scss` is composed entirely of imports in the following order:
 
-`base/`, `layout/`, `utilities/`, `abstract/`, `distinct/`
+`base/`, `layout/`, `utilities/`, `abstracts/`, `components/`
 
 ## References
 http://nicolasgallagher.com/about-html-semantics-front-end-architecture/
