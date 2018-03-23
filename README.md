@@ -1,6 +1,8 @@
 # CSS Methodology and Architecture
 *A summarized guide for organizing CSS, from class names to file structure*
 
+*Note, this guide is currently still a draft*
+
 ## Introduction
 This is a style guide promoting consistent, maintainable styling in web development.
 
