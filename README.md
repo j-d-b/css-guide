@@ -134,13 +134,13 @@ Examples: `a-button`, `a-media`, `a-list`, `a-card`, `a-menu`
 Examples: `chatbox`, `sidebar`, `staff-list`
 
 Now let's reflect these additions in our navbar example, and add a couple more elements:
-```
+``html
 <div class="l-row u-width-50">
   <div class="navbar navbar--blue t-bold js-main-nav">
     <div class="navbar-title"></div>
     <div class="navbar-item"></div>
     <div class="navbar-item navbar-item--new"></div>
-    <div class="navbar-item">
+    <div class="navbar-item navbar-item--button">
       <div class="a-button a-button--navbar"></div>
     </div>
   </div>
